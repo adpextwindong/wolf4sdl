@@ -1,0 +1,5 @@
+*.swp
+
+SDL*
+begin_code.h
+close_code.h

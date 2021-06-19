@@ -1627,7 +1627,8 @@ void    ThreeDRefresh (void)
         }
 #endif
         SDL_BlitSurface(screenBuffer, NULL, screen, NULL);
-        SDL_Flip(screen);
+        //SDL2 uses SDL_RenderPresent with a renderer instead of a surface
+        //SDL_Flip(screen);
     }
 
 #ifndef REMDEBUG
