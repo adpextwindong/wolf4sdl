@@ -18,7 +18,7 @@
 #	include <string.h>
 #	include <stdarg.h>
 #endif
-#include "SDL.h"
+#include "SDL/SDL.h"
 
 #if !defined O_BINARY
 #	define O_BINARY 0
@@ -1398,11 +1398,6 @@ static inline fixed FixedMul(fixed a, fixed b)
     #define strncasecmp strnicmp
     #define snprintf _snprintf
 #else
-    static inline char* itoa(int value, char* string, int radix)
-    {
-	    sprintf(string, "%d", value);
-	    return string;
-    }
 
     static inline char* ltoa(long value, char* string, int radix)
     {
